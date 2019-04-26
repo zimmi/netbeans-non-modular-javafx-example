@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+    <action>
+        <actionName>run</actionName>
+        <goals>
+            <goal>process-classes</goal>
+            <goal>exec:exec@run</goal>
+        </goals>
+    </action>
+    <action>
+        <actionName>debug</actionName>
+        <goals>
+            <goal>process-classes</goal>
+            <goal>exec:exec@debug</goal>
+        </goals>
+        <properties>
+            <jpda.attach>localhost:8000</jpda.attach>
+            <jpda.attach.trigger>Listening for transport dt_socket at address</jpda.attach.trigger>
+        </properties>
+    </action>
+</actions>
